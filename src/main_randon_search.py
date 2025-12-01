@@ -29,7 +29,7 @@ class Main:
         data.load_and_preprocess()
 
         print("\n=== Running Random Search ===")
-        rs = RandomSearch(data_handler=data, n_iter=10)
+        rs = RandomSearch(data_handler=data, n_iter=20)
         best_cfg, best_score = rs.search()
         rs.save_results("random_search_results.json")
 
