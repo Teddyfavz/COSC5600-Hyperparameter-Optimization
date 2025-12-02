@@ -1,8 +1,5 @@
 import time
 import json
-from tabnanny import verbose
-from turtledemo.penrose import start
-
 import numpy as np
 import self
 import tensorflow as tf
@@ -33,7 +30,7 @@ class HyperbandSearch:
             "epochs": int(np.random.choice(range(5, 51, 5)))
         }
 
-    #Training the model to build and return validation accuracy for a given configuration
+    # Training the model to build and return validation accuracy for a given configuration
     def run_trial(self, config, epochs):
         tf.keras.backend.clear_session()
 
@@ -58,7 +55,7 @@ class HyperbandSearch:
 
         return val_acc, duration, history.history
 
-    # Successive halving - Train and configuration for r epoch, keep top n/eta configuration
+    # Successive halving - Training and configuration for r epoch, keep top n/eta configuration
     def successive_halving(self, configs, n, r):
         results = []
 
@@ -93,7 +90,7 @@ class HyperbandSearch:
 
         return kept
 
-    #Main Hyperband loop
+    # Main Hyperband loop
     def search(self, verbose=True):
         """Run full Hyperband optimization search."""
         if self.data_handler is None:

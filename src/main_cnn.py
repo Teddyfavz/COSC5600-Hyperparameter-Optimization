@@ -5,7 +5,6 @@ import tensorflow as tf
 
 from data import DataHandler
 from cnn import CNNModel
-from hyperband_search import HyperbandSearch
 
 random.seed(42)
 np.random.seed(42)
