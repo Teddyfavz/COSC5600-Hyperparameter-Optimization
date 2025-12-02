@@ -1,8 +1,5 @@
 import time
 import json
-from tabnanny import verbose
-from turtledemo.penrose import start
-
 import numpy as np
 import self
 import tensorflow as tf
